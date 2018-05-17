@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    ofbiz:
+      image: marcopinball/ofbiz-demo:1106
+      volumes:
+        - ./data:/ofbiz/runtime/data
+        - ./config:/ofbiz/framework/entity/config/
+      ports:
+        - "8080:8080"
+        - "8443:8443"
+
